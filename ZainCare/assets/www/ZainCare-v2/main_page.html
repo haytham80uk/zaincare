@@ -1,0 +1,1265 @@
+﻿<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+ <head>
+ 	
+ 	  <link rel="stylesheet" href="tabs/jquery-ui.css">
+  <script src="tabs/jquery-1.js"></script>
+  <script src="tabs/jquery-ui.js"></script>
+	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <link rel="tabs/style.htm">
+    <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  
+  $(function() {
+    $( "#dialog1" ).dialog();
+  });
+  
+  
+     function showDialog() {
+            $( "#dialog1" ).dialog();
+        }
+  </script>
+ 	
+  <link rel="stylesheet" type="text/css" href="app_framework/css/af.ui.min.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="app_framework/css/af.ui.css">
+  <link rel="stylesheet" type="text/css" href="app_framework/css/icons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+  <link href="css/androidCss.css" rel="stylesheet" type="text/css" />
+  <title>Zain Care</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+   /* Prevent copy paste for all elements except text fields */
+   		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+   		input, textarea  { -webkit-user-select:text; }
+  .BG {
+	background-image: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+  </style>
+  <script src="intelxdk.js"></script>
+  <!--
+      Include xhr.js in your index.html when using web services that make cross origin requests
+      This file makes those requests successfully when testing your apps under the "EMULATE", "BUILD" & "TEST" tab with the 
+      Intel(R) App Preview mobile app.
+      DISCLAIMER: If you don't need to perform these requests, remove the following script (xhr.js)
+  -->
+  <script type="text/javascript" charset="utf-8" src="xhr.js"></script>
+  <script type="text/javascript">
+   /* This code is used to run as soon as Intel activates */
+   		var onDeviceReady=function(){
+   		//hide splash screen
+   		intel.xdk.device.hideSplashScreen();
+   		};
+   		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+  </script>
+  <script type="application/javascript" src="app_framework/appframework.ui.min.js"></script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+  <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+  <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+  <script type="application/javascript" src="js/index_user_scripts.js"></script>
+ <script type="application/javascript" src="js/af_subpage.js"></script>
+  
+  <script type="text/javascript" src="js/zaincare.js"></script>
+      	<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+      	<script type="text/javascript" src="js/lang.js"></script>
+      	
+ </head>
+
+ <body id="afui" onload="noBack();"
+    onpageshow="if (event.persisted) noBack();" onunload="">
+
+
+
+
+
+
+
+
+
+  <!-- content goes here-->
+  <div class="uwrap" id="content">
+   <div class="upage panel" id="mainpage" data-header="af-header-0" data-footer="none" style="background-image: images\backgrounds.png; background-color: Black">
+    <div class="upage-outer">
+     <header class="container-group inner-element uib_w_1" data-uib="app_framework/header" data-ver="0" id="af-header-0">
+      <h1>ZainCare</h1>
+      <div class="widget-container wrapping-col single-centered"></div>
+      <div class="widget-container content-area horiz-area wrapping-col left">
+       <a class="button widget uib_w_9 d-margins icon settings" data-uib="app_framework/button" data-ver="0" id="settingsbtn">Menu</a>
+      </div>
+      <div class="widget-container content-area horiz-area wrapping-col right"></div>
+     </header>
+     <div class="upage-content" id="mainsub" style="width: 100%; ">
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; width: 100%;">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0" style="width: 100%; ">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000" style="width: 100%; ">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          	
+          	
+          	
+          	
+          	
+
+          	
+          	
+          	
+          	
+          	
+										<table height="300" width="100%"
+											style="width: 100%; " align="center">
+												
+												
+												<tr height="30px";>
+
+												<td align="center" >
+													
+													        <div id="langBox" style="width: 250px;">
+													  	      <select id="lang">
+													  			<option value="en" selected >اللفة / Language</option>
+													  			<option value="en">English</option>
+													  			<option value="ar">العربية</option>
+													  		  </select>
+													  	  </div>
+												</td>
+												
+
+											</tr>
+
+
+												<tr height="30px">
+
+												<td align="center">
+													<button class="Btn" data-ver="0" id="aboutzain-btn"
+														style="width: 250px;">About Zain</button>
+												</td>
+												
+
+											</tr>
+											
+											<tr height="30px">
+
+
+												<td align="center" style="width: 269px;">
+													<button class="Btn" data-ver="0" id="shops-btn"
+														style="width: 250px;">Zain Shops</button> </a>
+												</td>
+
+												
+											</tr>
+										
+										
+											<tr height="30px">
+
+												<td align="center">
+													<button class="Btn" data-ver="0" id="contactus-btn"
+														style="width: 250px;">Contact Us</button>
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												
+											</tr>
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="Profile_page" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_5 row-height-5" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_5 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_13 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG" style="background-color: #000000">
+										<table align="center" height="300" style="width: 100%; ">
+											
+											
+										
+										
+
+											<tr height="30px">
+
+												<td align="center">
+													<button id="whocalled_" class="Btn" onClick="whocalled()" style="width: 250px; ">Who
+														Called</button>
+												</td>
+
+												
+											</tr>
+											
+											<tr height="30px">
+
+
+												<td align="center" style="width: 284px;">
+													<button class="Btn" data-ver="0" id="la7inna-btn"
+														style="width: 250px;">La7inna
+															Services</button> </a>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+
+												<td align="center" style="width: 284px;">
+													<button class="Btn" data-ver="0" id="internetMMS-btn"
+														style="width: 250px;">Internet & MMS</button> </a>
+												</td>
+
+												
+											</tr>
+
+											<tr height="30px">
+												<td align="center" style="width: 284px;">
+													<button class="Btn" data-ver="0" id="daleele-btn"
+														style="width: 250px;">Zain Daleele</button> </a>
+												</td>
+												
+											</tr>
+													<tr height="30px">
+												<td align="center" style="width: 284px;">
+													<button class="Btn" data-ver="0" id="infomsg-btn"
+														style="width: 250px;">Service Message Language</button> </a>
+												</td>
+												
+											</tr>
+											<tr>
+
+											</tr>
+
+											
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="Messages_page" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_12 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG" style="background-color: #000000">
+
+										<table align="center" height="300" style="width: 100%; ">
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_bal" class="Btn" onClick="getUssdBalance()" style="width: 230px; ">Balance</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_rech" class="Btn"
+														onClick="getUssdRechargeBalance()" style="width: 230px; ">Recharge
+														Balance</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_trans" class="Btn"
+														onClick="balanceTransfer()" style="width: 230px; ">Transfer
+														Balance</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_cb" class="Btn"
+														onClick="getUssdCallBackRequest()" style="width: 230px; ">Call Back
+														Request</button>
+														
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_showff" class="Btn" onClick="getUssdShowFF()" style="width: 230px; ">Show
+														F & F</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="pre_editff" class="Btn" onClick="getUssdEditFF()" style="width: 230px; ">Edit
+														F & F</button>
+												</td>
+
+												
+											</tr>
+											
+											<tr height="30px">
+
+												<td align="center">
+													<button class="Btn" data-ver="0" id="migration-btn"
+														style="width: 230px;">Migration</button>
+														</td>
+
+												
+											</tr>
+												<tr height="30px">
+												<td align="center" style="width: 10px;">
+													<button class="Btn" data-ver="0" id="BBPRE-btn"
+														style="width: 230px;">broadband</button>
+
+												</td>
+												
+											</tr>
+										</table>
+
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="Favorite_page" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col" >
+
+         <div class="widget uib_w_11 d-margins" data-uib="media/text" data-ver="0" >
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG" style="background-color: #000000">
+
+
+										<table align="center" height="300" style="width: 100%; ">
+
+											<tr height="30px">
+												<td align="center">
+													<button href="#" id="getUssdRemainingPackets" class="Btn"
+														onClick="getUssdRemainingPackets()" style="width: 250px;">Remaining
+														Stylee Packets</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="paybill" class="Btn"
+														onClick="getUssdPayTheBill()" style="width: 250px;">Pay
+														The Bill</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center" style="width: 10px;">
+													<button id="billinq" class="Btn"
+														onClick="getUssdBillInquiry()" style="width: 250px;">Bill
+														Inquery</button>
+												</td>
+
+												
+											</tr>
+
+
+											<tr height="30px">
+												<td align="center" style="width: 10px;">
+													<button class="Btn" data-ver="0" id="BB-btn"
+														style="width: 250px;">broadband</button>
+
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												<td align="center" style="width: 10px;">
+													<button id="showff" class="Btn"
+														onClick="getUssdShowFF_post()" style="width: 250px;">Show
+														F&F</button>
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												<td align="center" style="width: 10px;">
+													<button id="editff" class="Btn" onClick="getUssdEditFF_post()" style="width: 250px; ">Edit
+														F&F</button>
+												</td>
+												
+											</tr>
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <!-- broadband page -->
+         <div class="upage-content hidden" id="BB" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+
+
+											<tr height="30px">
+												<td align="center" class='text' id="bb_post_title">Postpaid Broadband monthly activation/deactivation</td>
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="bb_post_act" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband_post(1)">Activate</button>
+													</a>
+												</td>
+
+
+											</tr>
+											<tr height="30px">
+
+
+												<td align="center" style="width: 200px;">
+													<button id="bb_post_deact" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband_post(0)">Deactivate</button>
+													</a>
+												</td>
+
+
+											</tr>
+
+
+											<tr>
+
+											</tr>
+
+											<tr>
+
+											</tr>
+
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     
+      <!-- broadband page pre -->
+         <div class="upage-content hidden" id="BBPRE" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+
+
+
+
+											<tr>
+												<td align="center">
+													<button id="bb_pre_stat" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband(0)" style="width: 250px; ">View Status</button> </a>
+												</td>
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="bb_pre_day" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband(1)" style="width: 250px; ">Subscribe Daily</button> </a>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+
+												<td align="center" style="width: 250px;">
+													<button id="bb_pre_week" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband(7)" style="width: 250px; ">Subscribe Weekly</button> </a>
+												</td>
+
+												
+											</tr>
+
+											<tr height="30px">
+
+												<td align="center">
+													<button id="bb_pre_mon" class="BtnSmall"
+														onclick="getUssdSubscribInBrodband(30)" style="width: 250px; ">Subscribe Monthly</button> </a>
+												</td>
+
+												
+											</tr>
+											<tr>
+
+											</tr>
+
+											<tr>
+
+											</tr>
+
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     
+     <!-- Zain shops -->
+         <div class="upage-content hidden" id="zain-shops" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+
+
+<tr height="30px">
+
+
+<td width="43%" align="center" class="HeadTitle">
+
+    <Script language="JavaScript">
+    <!-- Script courtesy of http://www.web-source.net - Your Guide to Professional Web Site Design and Development
+    	function goto(form) { var index=form.select.selectedIndex
+    	if (form.select.options[index].value != "0") {
+    	location.href=form.select.options[index].value;}}
+    	//-->
+    	</SCRIPT>
+    	<FORM NAME="form1" width="60%" style="width: 270px; ">
+    	<SELECT NAME="select" ONCHANGE="goto(this.form)" SIZE="1">
+    	<OPTION VALUE="">Choose location الموقع
+    	<OPTION VALUE="zain_khartoum_shops.html">Khartoum الخرطوم
+    	<OPTION VALUE="zain_bahri_shops.html">Bahri الخرطوم بحري
+    	<OPTION VALUE="zain_omdur_shops.html">Omdurman ام درمان</SELECT>
+    	</FORM>
+        </td>
+
+
+</tr>
+
+
+
+</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+      <!-- Internet And MMS -->
+         <div class="upage-content hidden" id="internetMMS" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+											<tr height="30px">
+												
+												<td width="43%" align="center" class="HeadTitle" id="im_title">
+													Internet &amp; MMS</td>
+												
+											</tr>
+											<tr>
+												
+												<td align="center" class="text" style="color: #FFFFFF; font-style: normal; font-size: 20px; font-weight: bolder;;" id="im_1">Click on one of the below buttons to activate</td>
+												
+											</tr>
+											<tr height="30px">
+
+												
+												<td align="center" class="text"><button id="im_btn1"
+														class="BtnSmall" onclick="activateinternet()" style="width: 230px; ">Activate
+														Internet</button></td>
+												
+											</tr>
+											<tr height="30px">
+												
+												<td align="center" class="text"><button id="im_btn2"
+														class="BtnSmall" onclick="activatemms()" style="width: 230px; ">Activate
+														MMS</button>
+												
+											</tr>
+											<tr height="30px">
+												
+												<td align="center" class="text" style="color: #FFFFFF; font-style: normal; font-size: 20px; font-weight: bolder;;" id="im_2">You will recieve settings
+													message in few minutes</td>
+												
+											</tr>
+											<tr>
+												
+												<td align="center" class="text" style="color: #FFFFFF; font-style: normal; font-size: 20px; font-weight: bolder;;" id="im_3">Save it<br />
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												
+												<td align="center" class="text" style="color: #FFFFFF; font-style: normal; font-size: 20px; font-weight: bolder;;" id="im_4">you are ready now to use
+													INTERNET / MMS in your Android device.</td>
+												
+											</tr>
+											<tr height="30px">
+												
+												<td align="center"><br>
+												
+											</tr>
+											<tr>
+												
+												<td align='center'></td>
+												
+											</tr>
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+      <!-- about zain -->
+         <div class="upage-content hidden" id="aboutzain" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+<tr height="30px">
+
+<td width="43%" align="center" class="HeadTitle">
+About Zain
+</td>
+
+
+<tr height="30px">
+
+
+<td align="left" class="HeadTitle"><span dir="rtl"><br />
+VISION<br />
+</span></td>
+
+</tr>
+<tr height="30px">
+
+<td align="left" class="text" style="background-color: #000000">We will commit to sustaining our   stance in being the preferred Mobile Operator, leading the   telecommunications market growth in Sudan and expanding in the region,   driving economic prosperity and providing the highest value for all our   stakeholders through  operational excellence.
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="HeadTitle"><span class="HeadTitle"><span dir="rtl"><br />
+MISSION<br />
+  </span></span></td>
+  
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="text" style="background-color: #000000"><span dir="rtl">We will continue to challenge ourselves and set new   performance standards by investing in the future of our people , and   seeking knowledge and innovation in order to exceed our customers&rsquo;   expectations, and serve our community</span></td>
+  
+</tr>
+<tr height="30px" style="height: 97px; ">
+  
+  <td align="left" class="HeadTitle" style="height: 83px; "><span class="HeadTitle"><span dir="rtl"><br />
+Website<br />
+  </span></span></td>
+  
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="text" style="background-color: #000000"><span dir="rtl">http://www.sd.zain.com</span></td>
+  
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="HeadTitle"><span class="HeadTitle"><span dir="rtl"><br />
+Customer care<br />
+  </span></span></td>
+  
+</tr>
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="text"><span dir="rtl">123 Zain</span></td>
+  
+</tr>
+<tr height="30px">
+  
+  <td align="left" class="text"><span dir="rtl">0912300000 Others</span></td>
+  
+</tr>
+</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     <!-- contact us -->
+         <div class="upage-content hidden" id="contactus" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+											<tr height="30px">
+												<td align="center">
+													<button href="#" id="getUssdRemainingPackets" class="Btn" onClick="sendSMS()" style="width: 250px; ">Send SMS</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="button2" class="Btn" onClick="callcenter()" style="width: 250px; ">Call Center</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center" style="width: 10px;">
+													<button id="button3" class="Btn" onClick="sendmail()" style="width: 250px; ">Send an E-mail</button>
+												</td>
+
+												
+											</tr>
+											
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     <!-- DAleele -->
+         <div class="upage-content hidden" id="daleele" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+										<table align="center" height="300" style="width: 100%;">
+											<tr height="30px">
+												<td align="center">
+													<button href="#" id="dal_sub_btn" class="Btn" onClick="dal_sub()" style="width: 250px; ">Subscribe</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center">
+													<button id="dal_unsub_btn" class="Btn" onClick="dal_unsub()" style="width: 250px; ">Unsubscribe</button>
+												</td>
+
+												
+											</tr>
+											<tr height="30px">
+
+												<td align="center" style="width: 10px;">
+													<button id="dal_loc_btn" class="Btn" onClick="dal_loc()" style="width: 250px; ">Location</button>
+												</td>
+
+												
+											</tr>
+											
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+      <!-- info -->
+         <div class="upage-content hidden" id="infomsg" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="text" align="center">Change notifications message language</div>
+          <div class="text" align="center"> لتغيير لغة رسائل الاستعلام التي تصلك عبر زين</div>
+										<table align="center" height="200" style="width: 100%;">
+											<tr height="30px">
+												<td align="center">
+													<button href="#" id="button2" class="Btn" onClick="infomsg_ar()" style="width: 250px; ">العربية</button>
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												<td align="center">
+													<button id="button2" class="Btn" onClick="infomsg_en()" style="width: 250px; ">English</button>
+												</td>
+												
+											</tr>
+			
+											
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+       <!-- migration -->
+         <div class="upage-content hidden" id="migration" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="text" align="center" id="mig_title">By clicking one of the below buttons you will migrate your simcard to one of Zain's packages (Charging fees may apply)</div>
+										<table align="center" height="200" style="width: 100%;">
+											<tr height="30px">
+												<td align="center">
+													<button href="#" id="mig_ez" class="Btn" onClick="migration_eezee()" style="width: 250px; ">EEZEE</button>
+												</td>
+												
+											</tr>
+											<tr height="30px">
+												<td align="center">
+													<button id="mig_mon" class="Btn" onClick="migration_month()" style="width: 250px; ">Mobipaid Monthly</button>
+												</td>
+											</tr>
+											<tr height="30px">
+												<td align="center">
+													<button id="mig_q" class="Btn" onClick="migration_quarter()" style="width: 250px; ">Mobipaid Quarterly</button>
+												</td>
+											</tr>
+											<tr height="30px">
+												<td align="center">
+													<button id="mig_y" class="Btn" onClick="migration_year()" style="width: 250px; ">Mobipaid Yearly</button>
+												</td>
+											</tr>
+			
+											
+
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     <!-- la7inna -->
+         <div class="upage-content hidden" id="la7inna" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="text" align="center"> : اشترك بالخدمة عبر أي من الوسائل التالية<br>
+
+  الاتصال بالرقم 1717 *<br>
+ 
+
+  تحديد الرمز السري *<br>
+
+  اختيار النغمة من القائمة المحددة (سوداني –اسلاميات-عربي – خليجي – اجنبي – مرح ) و ذلك بالضغط على رمز ال* أثناء الإستماع للنغمة *<br>
+
+كما يمكن ايضا طلب النغمات عن طريق ارسال رمز النغمة الي الرقم (1717 ) كالاتي<br></div>
+										<table align="center" height="200" style="width: 100%;">
+
+											<tr height="30px">
+												<td style="color: #00FFFF; font-size: 16px; font-weight: bold">الرمز</td>
+
+												<td style="color: #00FFFF; font-size: 16px; font-weight: bold">الطريقة</td>
+
+											</tr>
+											<tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">List</td>
+
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لمعرفة رموز النغمات</td>
+											</tr>
+
+
+											<tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">sub</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">الاشتراك</td>
+											</tr>
+											<tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">unsub</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">الالغاء</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">buy*tone lD</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">للشراء</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">def*tone lD</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لاختيار النغمة للجميع</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">del*tone lD</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لحزف النغمة</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">assign*tone lD*number</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لتخصيص النغمة</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">ded*tone lD*number</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لاهداء النغمة</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">acc*tone lD*number</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">للموافقة للاستقبال</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">Rej*tone lD*number</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لرفض الاستقبال</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">BEG*ToneID*MSISDN</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">طلب نغمه من عميل</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">Ded*ToneID*Number</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">لقبول المشترك المستقبل للرساله</td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">AW*Tone ID</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">Wish Listاضافه ال </td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">LW*MSISDN</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">Wish Listاهداء نغمات المدرجه في ال </td>
+											</tr><tr>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">DW*Tone ID</td>
+												<td style="color: #FFFFFF; font-size: 16px; font-weight: bold">Wish Listلمسح ال </td>
+											</tr>
+										</table>
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     
+       <!-- my account  -->
+         <div role="page" class="upage-content hidden" id="my_account" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="HeadTitle" align="center">My Account<br></div>
+										
+										
+										<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs" style="background-color: Aqua; ">
+  <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+  <li aria-selected="true" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="0" role="tab" class="ui-state-default ui-corner-top ui-state-focus ui-tabs-active ui-state-active"><a id="ui-id-1" tabindex="-1" role="presentation" class="ui-tabs-anchor">Info</a></li>
+	<li aria-selected="false" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor">F&F</a></li>
+	<li aria-selected="false" aria-labelledby="ui-id-3" aria-controls="tabs-3" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-3" tabindex="-1" role="presentation" class="ui-tabs-anchor" >Services</a></li>
+  </ul>
+  <div style="display: block;" aria-hidden="false" aria-expanded="true" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" id="tabs-1">
+  	<p>MSISDN: +249912257891</p>
+	<p>Balance: 6.25 SDG</p>
+	<p>Validity: 13-Oct-2014</p>
+	<p>...:</p>
+  </div>
+
+</div>
+										
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     <!-- my account 2 -->
+         <div role="page" class="upage-content hidden" id="my_account2" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="HeadTitle" align="center">My Account<br></div>
+										
+										
+										<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
+  <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+  <li aria-selected="false" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-11" tabindex="-1" role="presentation" class="ui-tabs-anchor">Info</a></li>
+	<li aria-selected="true" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="0" role="tab" class="ui-state-default ui-corner-top ui-state-focus ui-tabs-active ui-state-active"><a id="ui-id-2" tabindex="-1" role="presentation" class="ui-tabs-anchor" >F&F</a></li>
+	<li aria-selected="false" aria-labelledby="ui-id-3" aria-controls="tabs-3" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-33" tabindex="-1" role="presentation" class="ui-tabs-anchor" >Services</a></li>
+  </ul>
+
+  <div style="display: block;" aria-hidden="false" aria-expanded="true" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" id="tabs-2">
+		<p class="text" align="center">Family and Friends</p>
+	
+  </div>
+											<table align="center" height="200" style="width: 292px; height: 328px">
+												<tr height="">
+													<td>FnF 1 :</td>
+													<td align="center" style="width: 100px; height: 28px">
+														<button href="#" id="button2" class=""
+															onClick="infomsg_ar()" style="width: 77px; height: 29px">Edit</button>
+													</td>
+												</tr>
+												<tr height="">
+													<td>FnF 2 :</td>
+													<td align="center"  style="width: 100px; ">
+														<button href="#" id="button2" class=""
+															onClick="infomsg_ar()" style="width: 77px; height: 26px">Edit</button>
+													</td>
+												</tr>
+												<tr height="" style="height: 34px; ">
+													<td>FnF 3 :</td>
+													<td align="center"  style="width: 100px; ">
+														<button href="#" id="button2" class=""
+															onClick="infomsg_ar()" style="width: 77px; height: 27px">Edit</button>
+													</td>
+												</tr>
+												<tr height="">
+													<td>FnF 4 :</td>
+													<td align="center"  style="width: 100px; ">
+														<button href="#" id="button2" class=""
+															onClick="infomsg_ar()" style="width: 77px; height: 25px">Edit</button>
+													</td>
+												</tr>
+												<tr height="">
+													<td>FnF 5 :</td>
+													<td align="center"  style="width: 100px; ">
+														<button href="#" id="button2" class=""
+															onClick="infomsg_ar()" style="width: 77px; height: 25px">Edit</button>
+													</td>
+												</tr>
+												<tr height="">
+													<td>FnF 6 :</td>
+													<td align="center"  style="width: 100px; ">
+														<button href="#" id="Button1" onclick="showDialog()" class=""  style="width: 77px; height: 23px">update</button>
+													</td>
+												</tr>
+									
+
+
+
+											</table>
+											<button href="#" id="Button1" onclick="showDialog()" class=""  style="width: 77px; height: 23px">update</button>
+
+
+<div id="dialog1" title="Enter Number" style="display: none;">
+ New Number: <input type="text" name="MSISDN">
+</div>
+
+
+										</div>
+										
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     <!-- my account 3 -->
+         <div role="page" class="upage-content hidden" id="my_account3" >
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="background-color: Black; ">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0"  class="BG" style="background-color: #000000">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div class="BG">
+          <div class="HeadTitle" align="center">My Account<br></div>
+										
+										
+										<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs" style="background-color: White; ">
+  <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+  <li aria-selected="false" aria-labelledby="ui-id-1" aria-controls="tabs-1" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-111" tabindex="-1" role="presentation" class="ui-tabs-anchor">Info</a></li>
+	<li aria-selected="true" aria-labelledby="ui-id-2" aria-controls="tabs-2" tabindex="-1" role="tab" class="ui-state-default ui-corner-top"><a id="ui-id-222" tabindex="-1" role="presentation" class="ui-tabs-anchor" >F&F</a></li>
+	<li aria-selected="false" aria-labelledby="ui-id-3" aria-controls="tabs-3" tabindex="0" role="tab" class="ui-state-default ui-corner-top ui-state-focus ui-tabs-active ui-state-active"><a id="ui-id-3" tabindex="-1" role="presentation" class="ui-tabs-anchor" >Services</a></li>
+  </ul>
+  
+ <div style="display: block;" aria-hidden="false" aria-expanded="true" role="tabpanel" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-3" id="tabs-3">
+	<p class="text" align="center">Current Services</p>
+	<p>outgoing / Incoming calls</p>
+	<p>outgoing / Incoming SMS</p>
+	<p>who called</p>
+	<p>...</p>
+  </div>
+</div>
+										
+									</div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     
+     
+     
+     
+     <!-- /upage-content -->
+
+     <div class="inner-element uib_w_2 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="0"
+     data-anim="{'style':'push', 'v':260, 'side':'left'}">
+      <div class="sidebar-content">
+
+       <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+        <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+         <div class="widget-container content-area vertical-col">
+
+          <ul class="list widget uib_w_3 d-margins" data-uib="app_framework/listview" data-ver="0">
+           <li class="widget uib_w_4-button widget uib_w_9" data-uib="app_framework/listitem" data-ver="0" id="home-btn">Zain</a>                                       </a>
+           </li>
+
+
+          </ul>
+          
+          <ul class="list widget uib_w_3 d-margins" data-uib="app_framework/listview" data-ver="0">
+           <li class="widget uib_w_4-button widget uib_w_9" data-uib="app_framework/listitem" data-ver="0" id="my-btn">Zain</a>                                       </a>
+           </li>
+
+
+          </ul>
+          
+          <ul class="list widget uib_w_5 d-margins" data-uib="app_framework/listview" data-ver="0">
+           <li class="widget uib_w_6-button widget uib_w_9" data-uib="app_framework/listitem" data-ver="0" id="favorites-btn">PostPaid Services                      </a>
+           </li>
+           <li class="widget uib_w_7-button widget uib_w_9" data-uib="app_framework/listitem" data-ver="0" id="messages-btn">Prepaid Services                                 </a>
+           </li>
+           <li class="widget uib_w_8-button widget uib_w_9" data-uib="app_framework/listitem" data-ver="0" id="profile-btn"><a class="button widget uib_w_9">Others                      </a>
+           </li>
+          </ul><span class="uib_shim"></span>
+         </div>
+        </div>
+        <span class="uib_shim"></span>
+       </div>
+
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+
+   </div>
+   <!-- /upage -->
+
+  </div>
+  <!-- /uwrap -->
+ </body>
+
+</html>
+

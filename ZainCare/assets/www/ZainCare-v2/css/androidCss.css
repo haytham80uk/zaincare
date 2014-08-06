@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+ .SubTitle
+ {	 
+	 color:#cb3fff;
+	 font-weight:bold;
+	 font-style:italic;
+	 font-family:Arial;	
+	 border-bottom-color:#cb3fff;
+	 border-bottom-style:solid;
+	 border-bottom-width:thin;
+ } 
+ .HeadTitle
+ {	 
+	 color:#cb3fff;
+	 font-weight:bolder;
+	 font-style:italic;
+	 font-family:Arial;	
+	 font-size:x-large;
+ } 
+ .li
+ {
+	 list-style:circle;
+	 font-family:;
+	 font-style:italic;
+	 color:#30eddd;
+     font-weight:lighter;
+ }
+ .text
+ {
+	  font-family:Arial;
+	  color:#30eddd;
+	  font-weight:bold;
+	  
+ }
+ .More
+ {
+	color:#2525fb;
+	font-size:smaller;
+	border-radius: 3px;
+	background-color:transparent;
+    font-family:Arial;
+	font-weight:bold;
+	border:none;
+	border:#3c98f1;
+	border-bottom-width:thin;
+	border-bottom-style:outset;
+	font-style:italic;
+	transition: background 0.3s ease-in-out; 
+ }
+ .More:hover
+ {
+	color:#0f0faa;	
+	background-color:#5f5264;
+ }
+ .Btn
+{
+	color: white;
+	border-radius: 3px;
+	background-color:transparent;
+    font-family:Arial;
+	font-weight:bold;
+	border:none;
+	border:#3c98f1;
+	border-style:solid;
+/*	border-width:thin; 
+*/	transition: background 0.3s ease-in-out;
+	height:45px;
+	width:300px;
+	font-size:large;
+	
+ }
+ .Btn:hover
+ {	
+	background:#5f5264;
+}
+.BtnBackHome 
+{
+  font-family:Arial;
+  font-weight:bold;
+  background: #3c98f1;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width:100px;
+  height:40px;
+  font-size:large;
+}
+.BtnBackHome:hover 
+{
+  background: #b937e9;
+}
+.BtnSmall
+{
+  font-family:Arial;
+  font-weight:bold;
+  background-color:transparent;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width:120px;
+  height:40px;
+  font-size:large;
+  border:none;
+	border:#3c98f1;
+	border-style:solid;
+	border-width:thin; 
+}
+.BtnSmall:hover 
+{
+  background: #5f5264;
+}
+.FooterText
+{
+	color:#FFF;
+	font-family::Arial;
+	font-style:italic;
+	font-size:xx-small;
+}

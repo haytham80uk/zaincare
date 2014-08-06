@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">Zain Care</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="index">file:///android_asset/www/index.html</string>
+	<string name="postpaidservices">file:///android_asset/www/post_paid_servies.html</string>
+	<string name="prepaidservices">file:///android_asset/www/pre_paid_servies.html</string>
+	<string name="postpaidstylee">file:///android_asset/www/post_paid_stylee.html</string>
+	<string name="prepaidplans">file:///android_asset/www/pre_paid_plans.html</string>
+	<string name="other_servies">file:///android_asset/www/other_servies.html</string>
+	<string name="offer">file:///android_asset/www/offer.html</string>
+	<string name="more">file:///android_asset/www/more.html</string>
+	<string name="mms">file:///android_asset/www/mms.html</string>
+	<string name="menu">file:///android_asset/www/menu.html</string>
+	<string name="master">file:///android_asset/www/master.html</string>
+	<string name="main">file:///android_asset/www/main.html</string>	
+	<string name="la7inna_services">file:///android_asset/www/la7inna_services.html</string>		
+	<string name="services">file:///android_asset/www/services.html</string>
+	<string name="shop_location">file:///android_asset/www/shop_location.html</string>	
+	<string name="spec">file:///android_asset/www/spec.html</string>		
+	<string name="subscribe_in_brodband">file:///android_asset/www/subscribe_in_brodband.html</string>
+	<string name="zain_khartoum_shops">file:///android_asset/www/zain_khartoum_shops.html</string>	
+</resources>
