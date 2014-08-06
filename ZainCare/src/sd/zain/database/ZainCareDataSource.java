@@ -77,13 +77,14 @@ public class ZainCareDataSource {
           return aPIN;
       }
 	  // Update the PIN number after get the new generated from the server when successful access done with provided by SMS
-	  public String updatePIN(String phoneNumber, String newPIN){
+	  public String updatePIN_MSISDN(String phoneNumber, String newPIN){
 		  	String x=null;
 		  		String[] args={phoneNumber};
 		  		ContentValues values = new ContentValues();
+		  		values.put(ZainCareSQLiteHelper.COLUMN_USERNAME, phoneNumber);
 		  		values.put(ZainCareSQLiteHelper.COLUMN_PASSWORD, newPIN);
 		  		try{
-		  			Integer num = database.update(ZainCareSQLiteHelper.TABLE_ZAINCARE, values, ZainCareSQLiteHelper.COLUMN_USERNAME + "= ?", args);
+		  			Integer num = database.update(ZainCareSQLiteHelper.TABLE_ZAINCARE, values, null, null);//ZainCareSQLiteHelper.COLUMN_USERNAME + "= ?"
 		  			Log.d("updatePIN", "Update Done !!"+" FOR "+Integer.toString(num) +" Record ");
 		  			Cursor cu = database.query(ZainCareSQLiteHelper.TABLE_ZAINCARE, allColumns, ZainCareSQLiteHelper.COLUMN_USERNAME + "= ?", args, null, null, null);
 		  				while (cu.moveToNext()){
