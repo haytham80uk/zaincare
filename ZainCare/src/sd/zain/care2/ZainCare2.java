@@ -968,14 +968,14 @@ public void showSelectedNumber(int type, String number) {
 	
 }
 // ***********************************ANDROID DATABASE CALL*********************************************
-public void updatePIN(String newPIN, String phoneNumber ){
+public void updatePINMSISDN(String newPIN, String phoneNumber ){
     // Initialization and open DB
     	zcdatasource = new ZainCareDataSource(this);
     	zcdatasource.open();
-    	String FeedBack = zcdatasource.updatePIN(phoneNumber, newPIN);
+    	String FeedBack = zcdatasource.updatePIN_MSISDN(phoneNumber, newPIN);
     	Toast.makeText(this,"UPDATE PIN TO :("+ FeedBack +")",Toast.LENGTH_LONG).show();  	
 	}
-public void getUSER(){
+public void getMSISDN(){
     // Initialization and open DB
     	zcdatasource = new ZainCareDataSource(this);
     	zcdatasource.open();
@@ -989,12 +989,13 @@ public void getPIN(){
     	String FeedBack = zcdatasource.getPIN(); //updatePIN(phoneNumber, newPIN);
     	Toast.makeText(this,"YOUR PIN is :("+ FeedBack+")",Toast.LENGTH_LONG).show();  	
 	}
+/**
 public void createUSER (String newPIN, String phoneNumber ){
     // Initialization and open DB
     	zcdatasource = new ZainCareDataSource(this);
     	zcdatasource.open();
     	String FeedBack = zcdatasource.getMSISDN(); //updatePIN(phoneNumber, newPIN);
     	Toast.makeText(this,"WELCOME :"+ FeedBack,Toast.LENGTH_LONG).show();  	
-	}
+	}*/
 }
 
